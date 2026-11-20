@@ -4,299 +4,492 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DORITOS SUPER DEAL</title>
+
+<title>Doritos Sweet Chili Pepper | Mega Deal</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
 <style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:linear-gradient(135deg,#fff200,#ff9800);
-    overflow-x:hidden;
-    text-align:center;
+background:linear-gradient(180deg,#071a3c,#0d2c63,#ff6a00);
+color:white;
+overflow-x:hidden;
 }
 
-.banner{
-    background:red;
-    color:white;
-    font-size:32px;
-    font-weight:900;
-    padding:20px;
-    animation:blink 1s infinite;
+.particles{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+pointer-events:none;
+z-index:0;
 }
 
-@keyframes blink{
-    50%{opacity:.6;}
-}
-
-.container{
-    padding:30px;
-}
-
-.korting{
-    display:inline-block;
-    margin:20px;
-    padding:20px 40px;
-    background:#ff0000;
-    color:white;
-    border-radius:20px;
-    font-size:38px;
-    font-weight:bold;
-    box-shadow:0 0 30px red;
-    animation:shake .4s infinite;
-}
-
-@keyframes shake{
-    25%{transform:rotate(2deg);}
-    75%{transform:rotate(-2deg);}
-}
-
-.product-wrapper{
-    position:relative;
-    display:inline-block;
-}
-
-.product{
-    max-width:400px;
-    width:90%;
-    transition:.3s;
-    filter:drop-shadow(0 20px 20px rgba(0,0,0,.4));
-}
-
-.product:hover{
-    transform:scale(1.05) rotate(-2deg);
-}
-
-.glans{
-    position:absolute;
-    top:0;
-    left:-100%;
-    width:50%;
-    height:100%;
-    background:rgba(255,255,255,.4);
-    transform:skewX(-25deg);
-    animation:shine 3s infinite;
-}
-
-@keyframes shine{
-    100%{
-        left:150%;
-    }
-}
-
-.oude-prijs{
-    margin-top:20px;
-    font-size:40px;
-    text-decoration:line-through;
-    color:#555;
-}
-
-.nieuwe-prijs{
-    color:red;
-    font-size:90px;
-    font-weight:900;
-    animation:pulse 1s infinite;
-}
-
-@keyframes pulse{
-    50%{
-        transform:scale(1.1);
-    }
-}
-
-.timer{
-    margin:20px auto;
-    width:fit-content;
-    background:white;
-    padding:15px 30px;
-    border-radius:15px;
-    font-size:38px;
-    box-shadow:0 5px 15px rgba(0,0,0,.2);
-}
-
-.buy-btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:20px 40px;
-    background:red;
-    color:white;
-    text-decoration:none;
-    border-radius:15px;
-    font-size:30px;
-    font-weight:bold;
-    transition:.3s;
-}
-
-.buy-btn:hover{
-    transform:scale(1.1);
-    background:#c00000;
-}
-
-.live{
-    margin-top:20px;
-    font-size:28px;
-    font-weight:bold;
-}
-
-.stock{
-    background:white;
-    max-width:500px;
-    margin:30px auto;
-    padding:20px;
-    border-radius:20px;
-}
-
-.bar{
-    width:100%;
-    height:30px;
-    background:#ddd;
-    border-radius:20px;
-    overflow:hidden;
-}
-
-.fill{
-    width:85%;
-    height:100%;
-    background:linear-gradient(to right,#ff0000,#ff9800);
-}
-
-.reviews{
-    background:white;
-    padding:20px;
-    border-radius:20px;
-    max-width:700px;
-    margin:30px auto;
-}
-
-.popup{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    background:#00c853;
-    color:white;
-    padding:15px;
-    border-radius:15px;
-    font-weight:bold;
-    box-shadow:0 0 20px rgba(0,0,0,.3);
-}
-
-.floating{
-    position:fixed;
-    font-size:50px;
-    animation:fall 10s linear infinite;
+.particle{
+position:absolute;
+font-size:25px;
+animation:fall linear infinite;
 }
 
 @keyframes fall{
-    from{
-        transform:translateY(-100px) rotate(0deg);
-    }
-
-    to{
-        transform:translateY(120vh) rotate(360deg);
-    }
+from{
+transform:translateY(-100vh) rotate(0deg);
+}
+to{
+transform:translateY(120vh) rotate(360deg);
+}
 }
 
-.c1{left:10%;animation-delay:0s;}
-.c2{left:30%;animation-delay:2s;}
-.c3{left:50%;animation-delay:4s;}
-.c4{left:70%;animation-delay:6s;}
-.c5{left:90%;animation-delay:8s;}
+.topbar{
+background:#ff0000;
+text-align:center;
+padding:12px;
+font-weight:700;
+font-size:18px;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:40px;
+position:relative;
+z-index:1;
+}
+
+.container{
+max-width:1300px;
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+justify-content:center;
+gap:50px;
+}
+
+.image-box{
+position:relative;
+}
+
+.product{
+width:420px;
+max-width:90vw;
+filter:drop-shadow(0 20px 30px rgba(0,0,0,.5));
+transition:.4s;
+}
+
+.product:hover{
+transform:rotate(-4deg) scale(1.05);
+}
+
+.glow{
+position:absolute;
+width:450px;
+height:450px;
+background:radial-gradient(circle,rgba(255,136,0,.7),transparent 70%);
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+z-index:-1;
+}
+
+.discount{
+position:absolute;
+top:0;
+right:-20px;
+background:red;
+padding:15px 25px;
+font-weight:900;
+border-radius:20px;
+font-size:24px;
+box-shadow:0 0 25px red;
+animation:shake .4s infinite;
+}
+
+@keyframes shake{
+25%{transform:rotate(2deg);}
+75%{transform:rotate(-2deg);}
+}
+
+.content{
+max-width:600px;
+}
+
+h1{
+font-size:60px;
+line-height:1.1;
+margin-bottom:15px;
+}
+
+.subtitle{
+font-size:22px;
+opacity:.9;
+margin-bottom:20px;
+}
+
+.old-price{
+font-size:40px;
+text-decoration:line-through;
+color:#ccc;
+}
+
+.new-price{
+font-size:90px;
+font-weight:900;
+color:#ffeb3b;
+text-shadow:0 0 20px #ffeb3b;
+animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+50%{
+transform:scale(1.07);
+}
+}
+
+.timer{
+margin-top:20px;
+background:white;
+color:black;
+padding:15px 25px;
+border-radius:15px;
+display:inline-block;
+font-size:32px;
+font-weight:700;
+}
+
+.buttons{
+margin-top:30px;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:18px 35px;
+border-radius:15px;
+text-decoration:none;
+font-weight:700;
+font-size:22px;
+}
+
+.buy{
+background:#ff0000;
+color:white;
+}
+
+.buy:hover{
+background:#c50000;
+}
+
+.cart{
+background:white;
+color:black;
+}
+
+.stats{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+margin-top:25px;
+}
+
+.stat{
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(10px);
+padding:15px;
+border-radius:15px;
+}
+
+.section{
+padding:80px 20px;
+position:relative;
+z-index:1;
+}
+
+.card{
+max-width:1100px;
+margin:auto;
+background:white;
+color:black;
+padding:40px;
+border-radius:30px;
+}
+
+.section h2{
+text-align:center;
+font-size:45px;
+margin-bottom:30px;
+}
+
+.stock-bar{
+width:100%;
+height:35px;
+background:#ddd;
+border-radius:30px;
+overflow:hidden;
+margin-top:15px;
+}
+
+.stock-fill{
+width:82%;
+height:100%;
+background:linear-gradient(90deg,red,orange);
+}
+
+.reviews{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.review{
+background:#f4f4f4;
+padding:20px;
+border-radius:20px;
+}
+
+.faq{
+margin-top:20px;
+}
+
+.faq-item{
+background:#f4f4f4;
+margin-bottom:15px;
+padding:20px;
+border-radius:15px;
+}
+
+.popup{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#00c853;
+padding:15px 20px;
+border-radius:15px;
+font-weight:700;
+z-index:999;
+box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+footer{
+padding:40px;
+text-align:center;
+background:#06152f;
+}
+
+@media(max-width:900px){
+
+h1{
+font-size:42px;
+}
+
+.new-price{
+font-size:70px;
+}
+
+.timer{
+font-size:24px;
+}
+
+}
 
 </style>
 </head>
-
 <body>
 
-<div class="floating c1">🔺</div>
-<div class="floating c2">🔺</div>
-<div class="floating c3">🔺</div>
-<div class="floating c4">🔺</div>
-<div class="floating c5">🔺</div>
+<div class="particles" id="particles"></div>
 
-<div class="banner">
-🔥 OP = OP | DORITOS MEGA DEAL 🔥
+<div class="topbar">
+🚚 GRATIS VERZENDING VANAF €25 | 🔥 OP = OP
 </div>
+
+<section class="hero">
 
 <div class="container">
 
-<div class="korting">
-💥 55% KORTING 💥
+<div class="image-box">
+
+<div class="glow"></div>
+
+<div class="discount">
+55% KORTING
 </div>
+
+<img src="doritos.png" class="product">
+
+</div>
+
+<div class="content">
 
 <h1>DORITOS SWEET CHILI PEPPER</h1>
 
-<div class="product-wrapper">
-    <img src="doritos.png" class="product">
-    <div class="glans"></div>
+<div class="subtitle">
+Krokante tortilla chips met een pittige sweet chili smaak.
 </div>
 
-<div class="oude-prijs">
-€10,99
-</div>
+<div class="old-price">€10,99</div>
 
-<div class="nieuwe-prijs">
-€4,99
-</div>
-
-<h2>⏰ Aanbieding eindigt over</h2>
+<div class="new-price">€4,99</div>
 
 <div class="timer" id="timer">
 02:00:00
 </div>
 
-<br>
-
-<a href="#" class="buy-btn">
-🛒 NU KOPEN
-</a>
-
-<div class="live">
-👀 <span id="viewers">23</span> mensen bekijken dit product nu
+<div class="buttons">
+<a href="#" class="btn buy">🛒 NU KOPEN</a>
+<a href="#" class="btn cart">❤️ Favoriet</a>
 </div>
 
-<div class="stock">
-<h2>⚠️ Nog maar 17 zakken op voorraad!</h2>
-
-<div class="bar">
-<div class="fill"></div>
+<div class="stats">
+<div class="stat">👀 <span id="viewers">23</span> bekijken nu</div>
+<div class="stat">📦 Nog maar 17 op voorraad</div>
+<div class="stat">⭐ 4.9 / 5</div>
 </div>
 
 </div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="card">
+
+<h2>Voorraadniveau</h2>
+
+<p>Nog slechts 17 verpakkingen beschikbaar.</p>
+
+<div class="stock-bar">
+<div class="stock-fill"></div>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="card">
+
+<h2>Klantervaringen ⭐⭐⭐⭐⭐</h2>
 
 <div class="reviews">
 
-<h2>⭐⭐⭐⭐⭐ 4.9/5</h2>
+<div class="review">
+<strong>Jan</strong><br><br>
+Beste chipssmaak die ik ooit heb geproefd.
+</div>
 
-<p>“Beste smaak ooit!”</p>
+<div class="review">
+<strong>Lisa</strong><br><br>
+Voor €4,99 direct besteld.
+</div>
 
-<p>“Voor €4,99 direct besteld.”</p>
-
-<p>“Geweldige aanbieding.”</p>
-
-<p>“Veel lekkerder dan verwacht.”</p>
-
+<div class="review">
+<strong>Mike</strong><br><br>
+Geweldige aanbieding.
 </div>
 
 </div>
 
-<div class="popup" id="popup">
-🛒 Iemand uit Houten heeft net gekocht!
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="card">
+
+<h2>Waarom kiezen voor Doritos?</h2>
+
+✅ Knapperige tortilla chips<br><br>
+✅ Sweet Chili Pepper smaak<br><br>
+✅ Ideaal voor feestjes<br><br>
+✅ Perfect bij frisdrank en snacks<br><br>
+✅ Tijdelijke aanbieding
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="card">
+
+<h2>Veelgestelde vragen</h2>
+
+<div class="faq">
+
+<div class="faq-item">
+<b>Hoe lang duurt de aanbieding?</b><br>
+Tot de timer afloopt of de voorraad op is.
+</div>
+
+<div class="faq-item">
+<b>Kan ik meerdere zakken bestellen?</b><br>
+Ja, zolang de voorraad strekt.
+</div>
+
+<div class="faq-item">
+<b>Is dit een tijdelijke actie?</b><br>
+Ja.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Doritos Mega Deal
+
+</footer>
+
+<div id="popup" class="popup">
+🛒 Iemand uit Houten heeft zojuist gekocht!
 </div>
 
 <script>
 
-let tijd = 7200;
+for(let i=0;i<30;i++){
+
+let p=document.createElement("div");
+
+p.className="particle";
+p.innerHTML="🔺";
+
+p.style.left=Math.random()*100+"%";
+p.style.animationDuration=(8+Math.random()*8)+"s";
+
+document.getElementById("particles").appendChild(p);
+
+}
+
+let tijd=7200;
 
 function updateTimer(){
 
-let uren = Math.floor(tijd/3600);
-let minuten = Math.floor((tijd%3600)/60);
-let seconden = tijd%60;
+let h=Math.floor(tijd/3600);
+let m=Math.floor((tijd%3600)/60);
+let s=tijd%60;
 
 document.getElementById("timer").innerHTML=
-String(uren).padStart(2,'0')+":"+
-String(minuten).padStart(2,'0')+":"+
-String(seconden).padStart(2,'0');
+String(h).padStart(2,'0')+":"+
+String(m).padStart(2,'0')+":"+
+String(s).padStart(2,'0');
 
 if(tijd>0){
 tijd--;
@@ -308,12 +501,12 @@ setInterval(updateTimer,1000);
 
 setInterval(()=>{
 
-document.getElementById("viewers").innerText =
-Math.floor(Math.random()*20)+15;
+document.getElementById("viewers").textContent=
+Math.floor(Math.random()*25)+15;
 
 },3000);
 
-const steden = [
+const steden=[
 "Houten",
 "Utrecht",
 "Amsterdam",
@@ -329,11 +522,11 @@ document.getElementById("popup").innerHTML=
 steden[Math.floor(Math.random()*steden.length)] +
 " heeft zojuist gekocht!";
 
-},5000);
+},6000);
 
 window.onload=function(){
 
-for(let i=0;i<75;i++){
+for(let i=0;i<80;i++){
 
 let c=document.createElement("div");
 
@@ -342,7 +535,8 @@ c.innerHTML="🎉";
 c.style.position="fixed";
 c.style.left=Math.random()*100+"vw";
 c.style.top=Math.random()*100+"vh";
-c.style.fontSize="30px";
+c.style.fontSize="28px";
+c.style.pointerEvents="none";
 
 document.body.appendChild(c);
 
