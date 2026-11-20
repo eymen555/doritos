@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Doritos Sweet Chili Pepper | Mega Deal</title>
+<title>Doritos Sweet Chili Pepper</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
@@ -19,534 +19,431 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(180deg,#071a3c,#0d2c63,#ff6a00);
+background:
+radial-gradient(circle at top,
+#ff6a00 0%,
+#10264f 35%,
+#08162d 100%);
 color:white;
 overflow-x:hidden;
 }
 
-.particles{
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
 position:fixed;
 width:100%;
-height:100%;
 top:0;
-left:0;
-pointer-events:none;
-z-index:0;
+backdrop-filter:blur(20px);
+background:rgba(0,0,0,.2);
+z-index:999;
 }
 
-.particle{
-position:absolute;
-font-size:25px;
-animation:fall linear infinite;
+.logo{
+font-size:32px;
+font-weight:900;
+color:#ffd000;
 }
 
-@keyframes fall{
-from{
-transform:translateY(-100vh) rotate(0deg);
-}
-to{
-transform:translateY(120vh) rotate(360deg);
-}
+.nav-btn{
+padding:12px 24px;
+border-radius:12px;
+border:none;
+background:#ff5e00;
+color:white;
+font-weight:bold;
+cursor:pointer;
 }
 
-.topbar{
-background:#ff0000;
-text-align:center;
-padding:12px;
-font-weight:700;
-font-size:18px;
-}
+/* HERO */
 
 .hero{
 min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
-padding:40px;
-position:relative;
-z-index:1;
-}
-
-.container{
-max-width:1300px;
-display:flex;
+padding:120px 8%;
+gap:100px;
 flex-wrap:wrap;
-align-items:center;
-justify-content:center;
-gap:50px;
 }
 
-.image-box{
-position:relative;
-}
-
-.product{
-width:420px;
-max-width:90vw;
-filter:drop-shadow(0 20px 30px rgba(0,0,0,.5));
-transition:.4s;
-}
-
-.product:hover{
-transform:rotate(-4deg) scale(1.05);
-}
-
-.glow{
-position:absolute;
-width:450px;
-height:450px;
-background:radial-gradient(circle,rgba(255,136,0,.7),transparent 70%);
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-z-index:-1;
-}
-
-.discount{
-position:absolute;
-top:0;
-right:-20px;
-background:red;
-padding:15px 25px;
-font-weight:900;
-border-radius:20px;
-font-size:24px;
-box-shadow:0 0 25px red;
-animation:shake .4s infinite;
-}
-
-@keyframes shake{
-25%{transform:rotate(2deg);}
-75%{transform:rotate(-2deg);}
-}
-
-.content{
+.left{
 max-width:600px;
 }
 
+.badge{
+display:inline-block;
+padding:10px 18px;
+background:red;
+border-radius:30px;
+font-weight:700;
+margin-bottom:20px;
+animation:pulse 1s infinite;
+}
+
 h1{
-font-size:60px;
-line-height:1.1;
-margin-bottom:15px;
+font-size:72px;
+line-height:1;
+margin-bottom:20px;
 }
 
 .subtitle{
 font-size:22px;
 opacity:.9;
-margin-bottom:20px;
+margin-bottom:25px;
 }
 
-.old-price{
-font-size:40px;
+/* PRIJS */
+
+.price{
+display:flex;
+align-items:center;
+gap:20px;
+margin-bottom:25px;
+}
+
+.old{
+font-size:38px;
 text-decoration:line-through;
-color:#ccc;
+opacity:.6;
 }
 
-.new-price{
+.new{
 font-size:90px;
 font-weight:900;
-color:#ffeb3b;
-text-shadow:0 0 20px #ffeb3b;
-animation:pulse 1s infinite;
+background:
+linear-gradient(
+45deg,
+#ffd000,
+#ff5e00
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
-@keyframes pulse{
-50%{
-transform:scale(1.07);
-}
-}
-
-.timer{
-margin-top:20px;
-background:white;
-color:black;
-padding:15px 25px;
-border-radius:15px;
-display:inline-block;
-font-size:32px;
-font-weight:700;
-}
+/* BUTTONS */
 
 .buttons{
-margin-top:30px;
 display:flex;
 gap:15px;
 flex-wrap:wrap;
-}
-
-.btn{
-padding:18px 35px;
-border-radius:15px;
-text-decoration:none;
-font-weight:700;
-font-size:22px;
-}
-
-.buy{
-background:#ff0000;
-color:white;
-}
-
-.buy:hover{
-background:#c50000;
-}
-
-.cart{
-background:white;
-color:black;
-}
-
-.stats{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-margin-top:25px;
-}
-
-.stat{
-background:rgba(255,255,255,.15);
-backdrop-filter:blur(10px);
-padding:15px;
-border-radius:15px;
-}
-
-.section{
-padding:80px 20px;
-position:relative;
-z-index:1;
-}
-
-.card{
-max-width:1100px;
-margin:auto;
-background:white;
-color:black;
-padding:40px;
-border-radius:30px;
-}
-
-.section h2{
-text-align:center;
-font-size:45px;
-margin-bottom:30px;
-}
-
-.stock-bar{
-width:100%;
-height:35px;
-background:#ddd;
-border-radius:30px;
-overflow:hidden;
-margin-top:15px;
-}
-
-.stock-fill{
-width:82%;
-height:100%;
-background:linear-gradient(90deg,red,orange);
-}
-
-.reviews{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.review{
-background:#f4f4f4;
-padding:20px;
-border-radius:20px;
-}
-
-.faq{
 margin-top:20px;
 }
 
-.faq-item{
-background:#f4f4f4;
-margin-bottom:15px;
-padding:20px;
+.buy{
+padding:18px 35px;
+border:none;
 border-radius:15px;
-}
 
-.popup{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#00c853;
-padding:15px 20px;
-border-radius:15px;
+background:
+linear-gradient(
+45deg,
+#ff0000,
+#ff7000
+);
+
+color:white;
+font-size:20px;
 font-weight:700;
-z-index:999;
-box-shadow:0 10px 30px rgba(0,0,0,.35);
+cursor:pointer;
+
+box-shadow:
+0 0 30px rgba(255,0,0,.4);
 }
 
-footer{
-padding:40px;
-text-align:center;
-background:#06152f;
+.wishlist{
+padding:18px 35px;
+border:none;
+border-radius:15px;
+background:white;
+color:black;
+font-size:20px;
+font-weight:700;
+cursor:pointer;
 }
+
+/* COUNTDOWN */
+
+.countdown{
+display:flex;
+gap:15px;
+margin-top:30px;
+}
+
+.box{
+background:white;
+color:black;
+padding:20px;
+border-radius:20px;
+min-width:100px;
+text-align:center;
+}
+
+.box h2{
+font-size:40px;
+}
+
+/* PRODUCT */
+
+.right{
+position:relative;
+}
+
+.glow{
+position:absolute;
+
+width:500px;
+height:500px;
+
+background:
+radial-gradient(
+circle,
+rgba(255,136,0,.9),
+transparent 70%
+);
+
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+
+filter:blur(40px);
+
+z-index:-1;
+}
+
+.product{
+width:450px;
+max-width:90vw;
+transition:.3s;
+filter:
+drop-shadow(
+0 25px 35px rgba(0,0,0,.45)
+);
+}
+
+.product:hover{
+transform:
+rotate(-3deg)
+scale(1.05);
+}
+
+/* FEATURES */
+
+.features{
+padding:100px 8%;
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+}
+
+.feature{
+background:
+rgba(255,255,255,.08);
+
+backdrop-filter:blur(15px);
+
+border:
+1px solid rgba(255,255,255,.15);
+
+padding:30px;
+border-radius:25px;
+
+font-size:20px;
+font-weight:600;
+}
+
+/* RESPONSIVE */
 
 @media(max-width:900px){
 
 h1{
-font-size:42px;
+font-size:50px;
 }
 
-.new-price{
+.new{
 font-size:70px;
 }
 
-.timer{
-font-size:24px;
+.hero{
+text-align:center;
+}
+
+.price{
+justify-content:center;
+}
+
+.buttons{
+justify-content:center;
+}
+
+.countdown{
+justify-content:center;
 }
 
 }
 
 </style>
 </head>
+
 <body>
 
-<div class="particles" id="particles"></div>
+<nav>
 
-<div class="topbar">
-🚚 GRATIS VERZENDING VANAF €25 | 🔥 OP = OP
+<div class="logo">
+DORITOS
 </div>
+
+<button class="nav-btn">
+🛒 Kopen
+</button>
+
+</nav>
 
 <section class="hero">
 
-<div class="container">
+<div class="left">
 
-<div class="image-box">
-
-<div class="glow"></div>
-
-<div class="discount">
-55% KORTING
+<div class="badge">
+🔥 55% KORTING
 </div>
 
-<img src="doritos.png" class="product">
+<h1>
+Doritos<br>
+Sweet Chili Pepper
+</h1>
 
-</div>
+<p class="subtitle">
+Knapperige tortilla chips met de perfecte combinatie van zoet en pittig.
+</p>
 
-<div class="content">
+<div class="price">
 
-<h1>DORITOS SWEET CHILI PEPPER</h1>
+<span class="old">
+€10,99
+</span>
 
-<div class="subtitle">
-Krokante tortilla chips met een pittige sweet chili smaak.
-</div>
+<span class="new">
+€4,99
+</span>
 
-<div class="old-price">€10,99</div>
-
-<div class="new-price">€4,99</div>
-
-<div class="timer" id="timer">
-02:00:00
 </div>
 
 <div class="buttons">
-<a href="#" class="btn buy">🛒 NU KOPEN</a>
-<a href="#" class="btn cart">❤️ Favoriet</a>
-</div>
 
-<div class="stats">
-<div class="stat">👀 <span id="viewers">23</span> bekijken nu</div>
-<div class="stat">📦 Nog maar 17 op voorraad</div>
-<div class="stat">⭐ 4.9 / 5</div>
-</div>
+<button class="buy">
+🛒 NU KOPEN
+</button>
 
-</div>
+<button class="wishlist">
+❤️ FAVORIET
+</button>
 
 </div>
 
-</section>
+<div class="countdown">
 
-<section class="section">
+<div class="box">
+<h2 id="hours">02</h2>
+<span>Uren</span>
+</div>
 
-<div class="card">
+<div class="box">
+<h2 id="minutes">00</h2>
+<span>Minuten</span>
+</div>
 
-<h2>Voorraadniveau</h2>
-
-<p>Nog slechts 17 verpakkingen beschikbaar.</p>
-
-<div class="stock-bar">
-<div class="stock-fill"></div>
+<div class="box">
+<h2 id="seconds">00</h2>
+<span>Seconden</span>
 </div>
 
 </div>
 
-</section>
-
-<section class="section">
-
-<div class="card">
-
-<h2>Klantervaringen ⭐⭐⭐⭐⭐</h2>
-
-<div class="reviews">
-
-<div class="review">
-<strong>Jan</strong><br><br>
-Beste chipssmaak die ik ooit heb geproefd.
 </div>
 
-<div class="review">
-<strong>Lisa</strong><br><br>
-Voor €4,99 direct besteld.
-</div>
+<div class="right">
 
-<div class="review">
-<strong>Mike</strong><br><br>
-Geweldige aanbieding.
-</div>
+<div class="glow"></div>
 
-</div>
+<img
+src="doritos.png"
+class="product"
+alt="Doritos">
 
 </div>
 
 </section>
 
-<section class="section">
+<section class="features">
 
-<div class="card">
+<div class="feature">
+🌶️ Sweet Chili Pepper smaak
+</div>
 
-<h2>Waarom kiezen voor Doritos?</h2>
+<div class="feature">
+⭐ Bestseller
+</div>
 
-✅ Knapperige tortilla chips<br><br>
-✅ Sweet Chili Pepper smaak<br><br>
-✅ Ideaal voor feestjes<br><br>
-✅ Perfect bij frisdrank en snacks<br><br>
-✅ Tijdelijke aanbieding
+<div class="feature">
+🔥 Tijdelijke korting
+</div>
 
+<div class="feature">
+🎉 Perfect voor feestjes
 </div>
 
 </section>
-
-<section class="section">
-
-<div class="card">
-
-<h2>Veelgestelde vragen</h2>
-
-<div class="faq">
-
-<div class="faq-item">
-<b>Hoe lang duurt de aanbieding?</b><br>
-Tot de timer afloopt of de voorraad op is.
-</div>
-
-<div class="faq-item">
-<b>Kan ik meerdere zakken bestellen?</b><br>
-Ja, zolang de voorraad strekt.
-</div>
-
-<div class="faq-item">
-<b>Is dit een tijdelijke actie?</b><br>
-Ja.
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<footer>
-
-© 2026 Doritos Mega Deal
-
-</footer>
-
-<div id="popup" class="popup">
-🛒 Iemand uit Houten heeft zojuist gekocht!
-</div>
 
 <script>
 
-for(let i=0;i<30;i++){
+let total = 7200;
 
-let p=document.createElement("div");
+setInterval(()=>{
 
-p.className="particle";
-p.innerHTML="🔺";
+let h=Math.floor(total/3600);
+let m=Math.floor((total%3600)/60);
+let s=total%60;
 
-p.style.left=Math.random()*100+"%";
-p.style.animationDuration=(8+Math.random()*8)+"s";
+document.getElementById("hours").innerText=
+String(h).padStart(2,'0');
 
-document.getElementById("particles").appendChild(p);
+document.getElementById("minutes").innerText=
+String(m).padStart(2,'0');
 
-}
-
-let tijd=7200;
-
-function updateTimer(){
-
-let h=Math.floor(tijd/3600);
-let m=Math.floor((tijd%3600)/60);
-let s=tijd%60;
-
-document.getElementById("timer").innerHTML=
-String(h).padStart(2,'0')+":"+
-String(m).padStart(2,'0')+":"+
+document.getElementById("seconds").innerText=
 String(s).padStart(2,'0');
 
-if(tijd>0){
-tijd--;
+if(total>0){
+total--;
 }
 
-}
+},1000);
 
-setInterval(updateTimer,1000);
+const product =
+document.querySelector('.product');
 
-setInterval(()=>{
+document.addEventListener('mousemove',(e)=>{
 
-document.getElementById("viewers").textContent=
-Math.floor(Math.random()*25)+15;
+let x =
+(e.clientX/window.innerWidth-.5)*20;
 
-},3000);
+let y =
+(e.clientY/window.innerHeight-.5)*20;
 
-const steden=[
-"Houten",
-"Utrecht",
-"Amsterdam",
-"Rotterdam",
-"Eindhoven",
-"Den Haag"
-];
+product.style.transform =
+`rotateY(${x}deg)
+ rotateX(${-y}deg)
+ scale(1.03)`;
 
-setInterval(()=>{
-
-document.getElementById("popup").innerHTML=
-"🛒 Iemand uit "+
-steden[Math.floor(Math.random()*steden.length)] +
-" heeft zojuist gekocht!";
-
-},6000);
-
-window.onload=function(){
-
-for(let i=0;i<80;i++){
-
-let c=document.createElement("div");
-
-c.innerHTML="🎉";
-
-c.style.position="fixed";
-c.style.left=Math.random()*100+"vw";
-c.style.top=Math.random()*100+"vh";
-c.style.fontSize="28px";
-c.style.pointerEvents="none";
-
-document.body.appendChild(c);
-
-setTimeout(()=>{
-c.remove();
-},5000);
-
-}
-
-};
+});
 
 </script>
 
